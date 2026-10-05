@@ -1,0 +1,42 @@
+/* Shared corporate theme for the public website. */
+:root { color-scheme: light; --ink: #172b45; --muted: #526174; --line: #dbe2ea; }
+body { color: var(--ink); background: #fff; overflow-x: hidden; }
+.hero-gradient, .page-gradient, .section-darker { background: #fff; }
+.section-dark { background: #f5f7fa; }
+section[id] { border-top: 1px solid var(--line); scroll-margin-top: 24px; }
+nav { background: #fff; border-bottom: 1px solid var(--line); }
+.glass-card { background: #fff; border: 1px solid var(--line); }
+.gold-gradient-text { color: #1a365d; }
+.btn-premium { transition: background-color 160ms ease, border-color 160ms ease; border-radius: 6px; }
+.btn-premium.bg-navy:hover { background: #294d79; }
+.btn-premium.bg-slate-100:hover { background: #e4eaf1; }
+a:focus-visible, button:focus-visible { outline: 3px solid #3876b9; outline-offset: 4px; }
+.hero-content { padding-top: 88px; padding-bottom: 48px; }
+.hero-layout { max-width: 960px; }
+.eyebrow { color: #526174; font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.hero-title { font-size: clamp(2.5rem, 5.4vw, 4.5rem); line-height: 1.12; letter-spacing: -.045em; font-weight: 600; }
+.hero-title span { color: #526b86; }
+.hero-features { margin-top: 64px; }
+.secondary-link { display: inline-flex; align-items: center; gap: 14px; padding: 16px 8px; font-size: 14px; font-weight: 500; color: #1a365d; }
+.secondary-link:hover { text-decoration: underline; text-underline-offset: 5px; }
+h2 { letter-spacing: -.025em; }
+.faq-answer[hidden] { display: none; }
+.faq-answer { padding-top: 0; }
+.faq-trigger { gap: 20px; }
+.faq-icon { flex-shrink: 0; }
+.faq-item.open .faq-icon { transform: rotate(180deg); }
+#cta .glass-card { background: #f5f7fa; }
+#pricing .glass-card { border-top: 3px solid #1a365d; }
+@media (max-width: 639px) {
+  nav > div { flex-wrap: wrap; gap: 16px; padding-top: 18px; padding-bottom: 18px; }
+  nav .btn-premium { padding: 10px 14px; font-size: 12px; }
+  .hero-content { padding-top: 48px; padding-bottom: 36px; }
+  .hero-features { margin-top: 40px; }
+  .glass-card.p-10, .glass-card.p-12 { padding: 24px; }
+  .faq-trigger { padding: 20px; }
+  .faq-answer { padding-left: 20px; padding-right: 20px; }
+  footer > div > div > div { flex-wrap: wrap; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
+}
